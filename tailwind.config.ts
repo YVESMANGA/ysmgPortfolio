@@ -11,8 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'myBlue': '#99fae6',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 } satisfies Config;
