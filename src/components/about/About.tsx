@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../title'
-import { CalendarSync, LetterText, Paintbrush, Section  } from 'lucide-react'
+import { LetterText  } from 'lucide-react'
 
 
 const aboutSections = [
