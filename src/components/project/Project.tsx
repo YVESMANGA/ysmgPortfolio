@@ -7,7 +7,7 @@ const projects = [
         title: 'Mon Portfolio',
         description: "C'est juste un site internet, où j'ai fait étalage de mes compétences et où je présente mes différentes réalisations.", 
         technologies: ['NextJS', 'Tailwind CSS'],
-        demoLink: '#',
+        demoLink: 'https://ysmg-portfolio-acl57phmx-yves-projects-872299a2.vercel.app/',
         repoLink: 'https://github.com/YVESMANGA/ysmgPortfolio',
         image: 'SiteP.PNG',
     }
