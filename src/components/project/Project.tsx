@@ -17,14 +17,14 @@ const projects = [
     description: "Site Vitrine, d'une entreprise dans le BTP", 
     technologies: ['NextJS', 'Tailwind CSS'],
     demoLink: 'http://saoronegoce.com/',
-    image: '/logos.JPG', // placé dans /public
+    image: 'logos.JPG', // placé dans /public
   },
   {
     title: 'Modexa',
     description: "Marketplace, permettant a d'autres boutiques, de renseigner leur produits.", 
     technologies: ['Laravel', 'Tailwind CSS'],
     demoLink: 'http://modexa.moda/',
-    image: '/modexa.JPG', // placé dans /public
+    image: 'modexa.JPG', // placé dans /public
   }
 ]
 
