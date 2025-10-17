@@ -1,86 +1,131 @@
-import React from 'react'
-import Title from '../title'
-import { Video } from 'lucide-react'
-import Image from 'next/image'
+"use client";
+import React from "react";
+import Title from "../title";
+import { Video } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: 'Mon Portfolio',
-    description: "C'est juste un site internet, où j'ai fait étalage de mes compétences et où je présente mes différentes réalisations.", 
-    technologies: ['NextJS', 'Tailwind CSS'],
-    demoLink: 'https://ysmg-portfolio.netlify.app/',
-    repoLink: 'https://github.com/YVESMANGA/ysmgPortfolio',
-    image: '/SiteP.PNG', // placé dans /public
+    title: "Mon Portfolio",
+    description:
+      "Site internet où je présente mes compétences et mes différentes réalisations.",
+    technologies: ["NextJS", "Tailwind CSS"],
+    demoLink: "https://ysmg-portfolio.netlify.app/",
+    repoLink: "https://github.com/YVESMANGA/ysmgPortfolio",
+    image: "/SiteP.PNG",
   },
   {
-    title: 'Saoro Negoce',
-    description: "Site Vitrine, d'une entreprise dans le BTP", 
-    technologies: ['NextJS', 'Tailwind CSS'],
-    demoLink: 'http://saoronegoce.com/',
-    image: 'logos.JPG', // placé dans /public
+    title: "Saoro Negoce",
+    description: "Site vitrine pour une entreprise evoluant dans le BTP",
+    technologies: ["NextJS", "Tailwind CSS"],
+    demoLink: "http://saoronegoce.com/",
+    image: "/logos.JPG",
   },
   {
-    title: 'Modexa',
-    description: "Marketplace, permettant a d'autres boutiques, de renseigner leur produits.", 
-    technologies: ['Laravel', 'Tailwind CSS'],
-    demoLink: 'http://modexa.moda/',
-    image: 'modexa.JPG', // placé dans /public
-  }
-]
+    title: "Modexa",
+    description:
+      "Marketplace permettant à d'autres boutiques de renseigner leurs produits.",
+    technologies: ["Laravel", "Tailwind CSS"],
+    demoLink: "http://modexa.moda/",
+    image: "/modexa.JPG",
+  },
+  {
+    title: "zynew-materials",
+    description: "Site vitrine pour une entreprise evoluant dans le peinture",
+    technologies: ["Laravel", "Tailwind CSS"],
+    demoLink: "https://www.zynew-materials.com/",
+    image: "/logoz.png",
+  },
+  {
+    title: "Lcs-mechatronics",
+    description:
+      "Site vitrine et e-commerce, d'une entreprise, evoluant dans le domaine de l'automobile",
+    technologies: ["Laravel", "Tailwind CSS"],
+    demoLink: "https://lps-mechatronics.com/",
+    image: "/hero.webp",
+  },
+  {
+    title: "cmilka",
+    description:
+      "Site vitrine et e-commerce, d'une entreprise, evoluant dans le domaine de la boulangerie et restauration",
+    technologies: ["Laravel", "Tailwind CSS"],
+    demoLink: "https://cmilka.sn/",
+    image: "/logo cmilka.jpg",
+  },
+];
 
 const Project = () => {
   return (
-    <div className='p-5 md:px-[15%]' id='project'>
-      <div className='mt-10'>
-        <Title title='Mes Projets'/>
-
-        {/* Grille responsive */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div key={index} className='bg-base-300 p-5 h-fit rounded-xl shadow-lg'>
-              <Image 
-                src={project.image} 
-                alt={project.title} 
-                width={600} 
-                height={400} 
-                className='w-full rounded-xl h-56 object-cover' 
-                unoptimized 
+    <div className="py-16 px-6 md:px-20 bg-white" id="project">
+      <Title title="Mes Projets" />
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="relative rounded-2xl shadow-xl overflow-hidden cursor-pointer bg-base-100"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.2, duration: 0.5, type: "spring" }}
+          >
+            <div className="relative w-full h-56">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover rounded-t-2xl"
+                unoptimized
               />
-
-              <div>
-                <h1 className='my-2 font-bold'>
+              {/* Overlay au hover */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                <h2 className="text-lg font-bold mb-2 text-center">
                   {project.title}
-                </h1>
-                <p className='text-sm'>
-                  {project.description}
-                </p>
-              </div>
-
-              <div className='flex flex-wrap gap-2 my-3'>
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className='badge badge-accent badge-sm'>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className='flex gap-2'>
-                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className='btn btn-accent'>
-                  Demo 
-                  <Video className='w-4' />
-                </a>
-                {project.repoLink && (
-                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className='btn btn-outline'>
-                    Code
+                </h2>
+                <div className="flex gap-2 mb-3 flex-wrap justify-center">
+                  {project.technologies.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-blue-400 text-white text-xs px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-500 hover:bg-green-600 px-3 py-1 rounded flex items-center gap-1 text-sm font-semibold"
+                  >
+                    Demo <Video className="w-4 h-4" />
                   </a>
-                )}
+                  {project.repoLink && (
+                    <a
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-gray-800 hover:bg-gray-100 px-3 py-1 rounded text-sm font-semibold"
+                    >
+                      Code
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+
+            {/* Description visible en dessous de l’image */}
+            <div className="p-4">
+              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <p className="text-gray-700 text-sm">{project.description}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
