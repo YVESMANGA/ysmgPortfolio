@@ -20,7 +20,7 @@ const projects = [
     description: "Site vitrine pour une entreprise evoluant dans le BTP",
     technologies: ["NextJS", "Tailwind CSS"],
     demoLink: "http://saoronegoce.com/",
-    image: "/logos.JPG",
+    image: "/logos.jpg",
   },
   {
     title: "Modexa",
@@ -28,7 +28,7 @@ const projects = [
       "Marketplace permettant à d'autres boutiques de renseigner leurs produits.",
     technologies: ["Laravel", "Tailwind CSS"],
     demoLink: "http://modexa.moda/",
-    image: "/modexa.JPG",
+    image: "/modexa.jpg",
   },
   {
     title: "zynew-materials",
