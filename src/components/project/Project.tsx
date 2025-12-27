@@ -38,11 +38,10 @@ const projects = [
     image: "/logoz.png",
   },
   {
-    title: "Lcs-mechatronics",
-    description:
-      "Site vitrine et e-commerce, d'une entreprise, evoluant dans le domaine de l'automobile",
+    title: "Gaming Store",
+    description: "Site e-commerce d'une boutique de Jeux Videos",
     technologies: ["Laravel", "Tailwind CSS"],
-    demoLink: "https://lps-mechatronics.com/",
+    demoLink: "https://gamingstore.store/",
     image: "/hero.webp",
   },
   {
@@ -52,6 +51,14 @@ const projects = [
     technologies: ["Laravel", "Tailwind CSS"],
     demoLink: "https://cmilka.sn/",
     image: "/logo cmilka.jpg",
+  },
+  {
+    title: "SenTech",
+    description:
+      "Site vitrine de SenTech, entreprise evoluant dans le domaine du numerique.",
+    technologies: ["NextJs"],
+    demoLink: "https://sen-tech.sn/",
+    image: "/logo.png",
   },
 ];
 
