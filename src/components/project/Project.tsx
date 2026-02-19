@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Mon Portfolio",
+    title: "Africa Drone Academy",
     description:
-      "Site internet où je présente mes compétences et mes différentes réalisations.",
-    technologies: ["NextJS", "Tailwind CSS"],
-    demoLink: "https://ysmg-portfolio.netlify.app/",
-    repoLink: "https://github.com/YVESMANGA/ysmgPortfolio",
-    image: "/SiteP.PNG",
+      "Plateforme d'examen pour les stagiares Telepilotes de drones.",
+    technologies: ["NextJS", "Tailwind CSS", "Laravel"],
+    demoLink: "http://africadroneacademy.com/",
+    repoLink: "",
+    image: "/SiteP.jpeg",
   },
   {
     title: "Saoro Negoce",
@@ -26,21 +26,21 @@ const projects = [
     title: "Modexa",
     description:
       "Marketplace permettant à d'autres boutiques de renseigner leurs produits.",
-    technologies: ["Laravel", "Tailwind CSS"],
+    technologies: ["Laravel", "Tailwind CSS", "NextJS"],
     demoLink: "http://modexa.moda/",
     image: "/modexa.jpg",
   },
   {
     title: "zynew-materials",
     description: "Site vitrine pour une entreprise evoluant dans le peinture",
-    technologies: ["Laravel", "Tailwind CSS"],
+    technologies: ["Laravel", "Tailwind CSS", "NextJS"],
     demoLink: "https://www.zynew-materials.com/",
     image: "/logoz.png",
   },
   {
     title: "Gaming Store",
     description: "Site e-commerce d'une boutique de Jeux Videos",
-    technologies: ["Laravel", "Tailwind CSS"],
+    technologies: ["Laravel", "Tailwind CSS", "NextJS"],
     demoLink: "https://gamingstore.store/",
     image: "/hero.webp",
   },
@@ -56,9 +56,17 @@ const projects = [
     title: "SenTech",
     description:
       "Site vitrine de SenTech, entreprise evoluant dans le domaine du numerique.",
-    technologies: ["NextJs"],
+    technologies: ["Angular", "Laravel"],
     demoLink: "https://sen-tech.sn/",
     image: "/logo.png",
+  },
+  {
+    title: "Negos internationale",
+    description:
+      "Site vitrine et E-commerce de l'agence immobiliere Negos Internationale.",
+    technologies: ["Nextjs", "Laravel", "Tailwind"],
+    demoLink: "https://www.negos-internationale.com/",
+    image: "/ni.png",
   },
 ];
 

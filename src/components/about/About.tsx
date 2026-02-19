@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Title from "../title";
-import { LetterText, Code, Database } from "lucide-react";
+import { LetterText, Database } from "lucide-react";
 import { motion } from "framer-motion";
 
 const aboutSections = [
@@ -19,14 +19,6 @@ const aboutSections = [
     description:
       "Je construis des APIs robustes et sécurisées, en utilisant les meilleures pratiques pour le backend.",
     icon: <Database className="text-white w-12 h-12" />,
-    color: "bg-blue-300",
-  },
-  {
-    id: 3,
-    title: "Data Scientist",
-    description:
-      "Je transforme les données en informations exploitables, avec des analyses et modèles prédictifs pour soutenir la prise de décision.",
-    icon: <Code className="text-white w-12 h-12" />,
     color: "bg-blue-300",
   },
 ];
